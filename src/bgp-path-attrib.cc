@@ -1508,6 +1508,7 @@ ssize_t BgpPathAttribMpNlriBase::parseHeader(const uint8_t *from, size_t length)
 }
 
 BgpPathAttribMpReachNlriIpv6::BgpPathAttribMpReachNlriIpv6(BgpLogHandler *logger) : BgpPathAttribMpNlriBase(logger) {
+    type_code = MP_REACH_NLRI;
     afi = IPV6;
 }
 
@@ -1832,6 +1833,7 @@ size_t BgpPathAttribMpReachNlriUnknow::getNlriLength() const {
 }
 
 BgpPathAttribMpUnreachNlriIpv6::BgpPathAttribMpUnreachNlriIpv6(BgpLogHandler *logger) : BgpPathAttribMpNlriBase(logger) {
+    type_code = MP_UNREACH_NLRI;
     afi = IPV6;
 }
 

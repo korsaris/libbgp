@@ -1484,7 +1484,7 @@ ssize_t BgpPathAttribMpNlriBase::parseHeader(const uint8_t *from, size_t length)
     if (hdr_len < 0) return -1;
 
     if (!optional || transitive || partial) {
-        logger->log(ERROR, "BgpPathAttribMpNlriBase::parse: bad flag bits, must be optional, !partial, !transitive.\n");
+        logger->log(ERROR, "BgpPathAttribMpNlriBase::parseHeader: bad flag bits, must be optional, !partial, !transitive.\n");
         setError(E_UPDATE, E_ATTR_FLAG, from , value_len + hdr_len);
         return -1;
     }

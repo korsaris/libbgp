@@ -1494,7 +1494,7 @@ ssize_t BgpPathAttribMpNlriBase::parseHeader(const uint8_t *from, size_t length)
         throw "bad_type";
     }
 
-    if (value_len < 5) {
+    if (value_len < 3) {
         logger->log(ERROR, "BgpPathAttribMpNlriBase::parseHeader: incompete attribute.\n");
         setError(E_UPDATE, E_OPT_ATTR, NULL, 0);
         return -1;
